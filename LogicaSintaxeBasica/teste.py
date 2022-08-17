@@ -1,4 +1,4 @@
-frutas = ["uva", "maçã", "banana", "laranja"]
-
-for i in frutas:
+for i in range(1,8):
+    if(i == 5):
+        continue
     print(i)
