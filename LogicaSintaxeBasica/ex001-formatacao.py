@@ -7,3 +7,8 @@ mes = 10
 ano = 2015
 
 print(dia, mes, ano, sep='/')
+#ou
+print("{}/{}/{}".format(dia,mes,ano))
+#ou
+print(f"{dia}/{mes}/{ano}")
+
