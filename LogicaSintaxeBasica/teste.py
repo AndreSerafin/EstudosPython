@@ -1,7 +1,8 @@
-pc1 = input().split(" ")
-pc2 = input().split(" ")
+valor = int(input())
 
+vet = [100, 50, 20, 10, 5, 2, 1]
 
-val_total = int(pc1[1]) * (float(pc1[2])) + int(pc2[1]) * float(pc2[2])
-
-print(f"VALOR A PAGAR: R$ {val_total:.2f}")
+for i in range(0,7):
+    qtdd_notas = int(valor) // vet[i]
+    valor %= vet[i]
+    print(f"{qtdd_notas} nota (s) de R$ {vet[i]},00")    
