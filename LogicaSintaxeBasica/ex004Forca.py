@@ -2,70 +2,49 @@ import os
 
 def add_parte(num_tentativas):
         os.system("cls" if(os.name == "nt" ) else "clear")
+        print("   __")
+        print("  |  \\")
+        print("  |   |  ")
         if(num_tentativas == 0):
-            print("   __")
-            print("  |  \\")
-            print("  |   |  ")
             print("  |")
             print("  |")
             print("  |")
-            print(" _|_")
+            print("  |")
         elif(num_tentativas == 1):
-            print("   __")
-            print("  |  \\")
-            print("  |   |  ")
             print("  |   O")
             print("  |")
             print("  |")
-            print(" _|_")
+            print("  |")
         elif(num_tentativas == 2):
-            print("   __")
-            print("  |  \\")
-            print("  |   |  ")
             print("  |   O")
             print("  |   |")
             print("  |")
-            print(" _|_")
+            print("  |")
         elif(num_tentativas == 3):
-            print("   __")
-            print("  |  \\")
-            print("  |   |  ")
             print("  |   O")
             print("  |  /|")
             print("  |")
-            print(" _|_")
+            print("  |")
         elif(num_tentativas == 4):
-            print("   __")
-            print("  |  \\")
-            print("  |   |  ")
             print("  |   O")
             print("  |  /|\\")
             print("  |")
-            print(" _|_")
         elif(num_tentativas == 5):
-            print("   __")
-            print("  |  \\")
-            print("  |   |  ")
             print("  |   O")
             print("  |  /|\\")
             print("  |  /")
-            print(" _|_")
+            print("  |")
         elif(num_tentativas == 6):
-            print("   __")
-            print("  |  \\")
-            print("  |   |  ")
             print("  |   O")
             print("  |  /|\\")
             print("  |  / \\")
-            print(" _|_")
+            print("  |")
         elif(num_tentativas > 6):
-            print("   __")
-            print("  |  \\")
-            print("  |   |  ")
-            print("  |   0")
+            print("  |   O")
+            print("  |")
             print("  |  /|\\")
             print("  |  / \\")
-            print(" _|_")
+        print(" _|_")
 
 def testa_palpite(palpite, palavra_secreta):
     
@@ -89,17 +68,16 @@ def jogar_forca():
     print("Bem vindo ao jogo da Forca!")
     print("--------------------------")
 
-    palavra_secreta = "banana"
+    palavra_secreta = "alface-repolho"
     total_tentativas = 6
     num_tentativa = 0
 
     print("PALAVRA: " + "_ " * len(palavra_secreta))
     forma_palavra_lista = list("_" * len(palavra_secreta))
 
-    while(num_tentativa <=6 or chute != palavra_secreta):
+    while(num_tentativa <=7 or chute != palavra_secreta):
+        
         add_parte(num_tentativa)
-
-
 
         palavra = " ".join(map(str,forma_palavra_lista))
         if("".join(map(str,forma_palavra_lista)) == palavra_secreta):
