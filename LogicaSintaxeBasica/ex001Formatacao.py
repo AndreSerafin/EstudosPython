@@ -11,4 +11,6 @@ print(dia, mes, ano, sep='/')
 print("{}/{}/{}".format(dia,mes,ano))
 #ou
 print(f"{dia}/{mes}/{ano}")
+if dia >= 14: 
+    ano = 2304
 

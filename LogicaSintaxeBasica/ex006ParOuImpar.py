@@ -2,13 +2,17 @@
 # informe se este número é par ou ímpar. Caso o usuário não digite um número
 # inteiro, informe que não é um número inteiro.
 
-n1 = input("Digite um numero inteiro: ")
+num_1 = input("Digite um número inteiro: ")
+flag = False
 
-try:
-    n1 = int(n1)
-    if (n1 % 2 == 0):
-        print(f"{n1} é par")
-    else:
-        print(f"{n1} é ímpar")
-except:
-    print("Não foi digitado um numero inteiro!")
+while not flag:
+    try:
+        int_num_1 = int(num_1)
+        if int_num_1 % 2 == 0:
+            print(f"O número {num_1} é par")
+        else:
+            print(f"O número {num_1} é ímpar")
+        flag = True
+    except:
+        print("Valor inválido")
+        num_1 = input("Digite um número inteiro: ")

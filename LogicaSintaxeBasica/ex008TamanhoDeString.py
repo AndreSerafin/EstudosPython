@@ -5,9 +5,12 @@
 nome = input("Digite seu nome: ")
 tam = len(nome)
 
-if(tam < 5):
-    print("Seu nome é muito curto!")
-elif(tam <= 6):
-    print("Seu nome é normal!")
+if tam > 1:
+    if(tam < 5):
+        print("Seu nome é curto!")
+    elif(tam <= 6):
+        print("Seu nome é normal!")
+    else:
+        print("Seu nome é grande!")
 else:
-    print("Seu nome é muito grande!")
+    print("Digite mais de uma letra!")
