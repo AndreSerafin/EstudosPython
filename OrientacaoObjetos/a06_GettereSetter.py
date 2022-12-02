@@ -12,16 +12,20 @@
 
 class Caneta:
     def __init__(self, cor_tinta):
-        self.cor_tinta = cor_tinta
+        self._cor_tinta = cor_tinta
         
     @property
     def cor(self):
-        return self.cor_tinta
+        return self._cor_tinta
     
-    @property
-    def cor_tampa(self):
-        return 123456    
-        
+    @cor.setter
+    def cor(self, valor):
+        self._cor_tinta = valor
+
+
+
+    
 caneta1 = Caneta('Azul')
 print(caneta1.cor)
-print(caneta1.cor_tampa)
+caneta1.cor = 'Verde'
+print(caneta1.cor)

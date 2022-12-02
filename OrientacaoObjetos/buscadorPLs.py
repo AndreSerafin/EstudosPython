@@ -23,11 +23,11 @@ def dados_digitados():
     ano = int(input('Digite o ano que deseja buscar: '))
     if ano < 1989 or ano > date.today().year:
         raise ValueError
-    dataIncio = input('Data de inicio(dd/mm/aaaa): ')
+    dataIncio = input('Data de inicio(dd/mm): ')
     dataFim = input('Data de Finalização: ')
     
-    dataIncioForm = dataIncio[6:] + '-' + dataIncio[3:5] + '-' + dataIncio[0:2]
-    dataFimForm = dataFim[6:] + '-' + dataFim[3:5] + '-' + dataFim[0:2]
+    dataIncioForm = str(ano) + '-' + dataIncio[3:5] + '-' + dataIncio[0:2]
+    dataFimForm = str(ano) + '-' + dataFim[3:5] + '-' + dataFim[0:2]
     return ano,dataIncioForm, dataFimForm
     
     

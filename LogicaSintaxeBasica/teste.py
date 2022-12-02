@@ -1,8 +1,4 @@
-import ast
+def somar(num1 : int, num2 : int):
+    return num1 + num2
 
-perguntas = open('LogicaSintaxeBasica/perguntas.txt', 'r')
-p = perguntas.read()
-
-dic = ast.literal_eval(p)
-
-print(dic)
+print(somar([1], ))
